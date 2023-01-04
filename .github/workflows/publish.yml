@@ -31,5 +31,5 @@ jobs:
 
       - name: Publish package
         run: |
-          echo ${{ github/repository_owner }}
+          echo ${{ github.repository_owner }}
           dotnet nuget push bin/Debug/*.nupkg --api-key ${{ secrets.WRITE_PACKAGES_TOKEN }} --source https://nuget.pkg.github.com/${{ github.repository_owner }}
